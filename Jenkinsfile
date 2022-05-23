@@ -2,19 +2,20 @@ pipeline {
     agent any
 
     stages {
-        stage('Infracost') {
+        stage('Build') {
             steps {
-                echo 'Running Infracost'
-                export INFRACOST_API_KEY=6ntq4fAdhFyNcHrVr101HzlZFXVJnsJd
-                infracost breakdown --path .
+                echo 'Building..'
             }
         }
-        stage('TFSEC') {
+        stage('Test') {
             steps {
-                echo 'Security Scan'
-                /home/bitnami/.linuxbrew/bin/tfsec --no-color
+                echo 'Testing..'
             }
         }
-
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
     }
 }
