@@ -10,7 +10,7 @@ pipeline {
         stage('INFRACOST') {
             steps {
                 sh 'export INFRACOST_API_KEY=6ntq4fAdhFyNcHrVr101HzlZFXVJnsJd'
-                sh '/usr/local/bin/infracost breakdown --path .'
+                sh 'sudo /usr/local/bin/infracost breakdown --path .'
             }
         }
     }
