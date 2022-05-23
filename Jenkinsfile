@@ -5,7 +5,7 @@ pipeline {
         stage('Infracost') {
             steps {
                 sh 'export INFRACOST_API_KEY=6ntq4fAdhFyNcHrVr101HzlZFXVJnsJd'
-                sh 'infracost breakdown --path .'
+                sh 'sudo infracost breakdown --path .'
             }
         }
         stage('Breakdown') {
