@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Infracost') {
             steps {
-                sh 'export INFRACOST_API_KEY=6ntq4fAdhFyNcHrVr101HzlZFXVJnsJd'
-                sh 'infracost breakdown --path .'
+                'export INFRACOST_API_KEY=6ntq4fAdhFyNcHrVr101HzlZFXVJnsJd'
+                'infracost breakdown --path .'
             }
         }
         stage('Test') {
