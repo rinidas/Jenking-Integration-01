@@ -1,6 +1,5 @@
 pipeline {
     agent any
-
     stages {
         stage('TFSEC_SCAN') {
             steps {
