@@ -4,13 +4,12 @@ pipeline {
     stages {
         stage('Infracost') {
             steps {
-                'export INFRACOST_API_KEY=6ntq4fAdhFyNcHrVr101HzlZFXVJnsJd'
-                'infracost breakdown --path .'
+                sh 'export INFRACOST_API_KEY=6ntq4fAdhFyNcHrVr101HzlZFXVJnsJd'
             }
         }
-        stage('Test') {
+        stage('Breakdown') {
             steps {
-                echo 'Testing..'
+                sh 'infracost breakdown --path .'
             }
         }
         stage('Deploy') {
