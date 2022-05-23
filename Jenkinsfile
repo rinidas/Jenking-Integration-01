@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Breakdown') {
             steps {
-                sh 'infracost breakdown --path .'
+                sh '/home/bitnami/.linuxbrew/bin/tfsec --no-color'
             }
         }
         stage('Deploy') {
