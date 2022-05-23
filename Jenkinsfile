@@ -2,9 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Infracost') {
             steps {
-                echo 'Building..'
+                export INFRACOST_API_KEY=6ntq4fAdhFyNcHrVr101HzlZFXVJnsJd
+                infracost breakdown --path .
             }
         }
         stage('Test') {
