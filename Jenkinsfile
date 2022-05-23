@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Terraform Validate') {
             steps {
-                sh 'terraform validate'
+                sh 'terraform validate -no-color'
             }
         }
         stage('TFSEC_SCAN') {
