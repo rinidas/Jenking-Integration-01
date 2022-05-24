@@ -8,7 +8,7 @@ pipeline {
         }
          stage('Infracost') {
             environment {
-                INFRACOST_API_KEY='6ntq4fAdhFyNcHrVr101HzlZFXVJnsJd'
+                INFRACOST_API_KEY=credentials('jenkins-infracost-api-key')
             }
             steps {
                 sh 'infracost breakdown --path .'
